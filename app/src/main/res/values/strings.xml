@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">E-commerice Mvp</string>
+    <string name="login_logo">Login</string>
+    <string name="sign_up">Sign up</string>
+
+
+    <string name="UserName_typeText">Ezzat</string>
+</resources>
