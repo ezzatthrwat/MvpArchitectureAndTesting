@@ -1,4 +1,4 @@
-package com.example.e_commericemvp.databases;
+package com.example.e_commericemvp.ui.databases;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

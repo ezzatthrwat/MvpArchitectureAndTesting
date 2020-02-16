@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.example.e_commericemvp.Activities.product_activity.ui.ProductContract;
 import com.example.e_commericemvp.database.AppDatabase;
+import com.example.e_commericemvp.util.EspressoIdlingResource;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,10 +61,14 @@ public class ProductRepository  implements ProductContract.GetProductsInteractor
     @Override
     public void onFetchingProductsDataStart(final int userID, final OnFinishedListener onFinishedListener) {
 
+        EspressoIdlingResource.increment();
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 onFinishedListener.onFetchingProductsDataFinished(getAllProducts() , getProductsFromCart(userID));
+                EspressoIdlingResource.decrement();
+
             }
         }, 1200);
     }

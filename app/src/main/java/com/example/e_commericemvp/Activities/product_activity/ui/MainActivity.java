@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements ProductContract.P
 
     private void initRecyclerView() {
 
-        recyclerView = findViewById(R.id.button);
+        recyclerView = findViewById(R.id.RecyclerView_Products);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(MainActivity.this, 2);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements ProductContract.P
     public void onGetProducts(List<ProductModel> productsList) {
 
         productListAdapter = new ProductListAdapter(this, productsList , productPresenter);
-
         recyclerView.setAdapter(productListAdapter);
+
     }
 }

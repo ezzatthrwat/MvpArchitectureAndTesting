@@ -13,7 +13,7 @@ import com.example.e_commericemvp.Activities.registration.pojo.User_DAO;
 import com.example.e_commericemvp.Activities.product_activity.pojo.Product_DAO;
 import com.example.e_commericemvp.Activities.product_activity.pojo.ProductModel;
 
-@Database(entities = {ProductModel.class , CartItemsModel.class , UserModel.class} , version = 24, exportSchema = false)
+@Database(entities = {ProductModel.class , CartItemsModel.class , UserModel.class} , version = 25, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     public static final String DATABASE_NAME = "e-commerceMvp.db";

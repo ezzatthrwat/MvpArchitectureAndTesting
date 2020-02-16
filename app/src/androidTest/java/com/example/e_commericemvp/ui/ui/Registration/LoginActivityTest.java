@@ -1,4 +1,4 @@
-package com.example.e_commericemvp.ui;
+package com.example.e_commericemvp.ui.ui.Registration;
 
 import android.content.Context;
 

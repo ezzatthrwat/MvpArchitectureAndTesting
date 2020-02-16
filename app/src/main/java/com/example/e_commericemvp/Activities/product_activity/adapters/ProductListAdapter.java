@@ -52,7 +52,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         return productsList.size();
     }
 
-    class ProductList_ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ProductList_ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private int productQuantityNumber = 0 ;
 

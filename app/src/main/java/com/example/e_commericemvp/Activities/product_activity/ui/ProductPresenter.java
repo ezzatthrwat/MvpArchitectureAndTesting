@@ -8,6 +8,7 @@ import com.example.e_commericemvp.Activities.cart_activity.pojo.CartItemsModel;
 import com.example.e_commericemvp.Activities.cart_activity.pojo.CartRepository;
 import com.example.e_commericemvp.Activities.product_activity.pojo.ProductModel;
 import com.example.e_commericemvp.Activities.product_activity.pojo.ProductRepository;
+import com.example.e_commericemvp.util.EspressoIdlingResource;
 
 import java.util.List;
 
@@ -57,8 +58,10 @@ public class ProductPresenter implements ProductContract.Presenter   {
                         }
                     }
 
+
                     productView.onGetProducts(ProductsList);
                     productView.hideProgress();
+
                 }
             }
         });

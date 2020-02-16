@@ -1,13 +1,12 @@
-package com.example.e_commericemvp.databases;
+package com.example.e_commericemvp.ui.databases;
 
 import android.util.Log;
 
 import com.example.e_commericemvp.Activities.product_activity.pojo.ProductModel;
 
-import org.junit.rules.MethodRule;
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;
-import org.junit.runners.model.FrameworkMethod;
+
 import org.junit.runners.model.Statement;
 
 public class ProductModel_CustomRule implements TestRule {

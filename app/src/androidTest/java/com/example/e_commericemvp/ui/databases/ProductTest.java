@@ -1,14 +1,16 @@
-package com.example.e_commericemvp.databases;
+package com.example.e_commericemvp.ui.databases;
 
 import androidx.test.core.app.ApplicationProvider;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.example.e_commericemvp.Activities.product_activity.pojo.ProductModel;
+import com.example.e_commericemvp.Activities.product_activity.pojo.Product_DAO;
 import com.example.e_commericemvp.database.AppDatabase;
 
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -16,12 +18,16 @@ import org.junit.runner.RunWith;
 public class ProductTest {
 
     private AppDatabase db ;
+    private Product_DAO product_dao ;
+
+    @Rule
+    public ProductModel_CustomRule productModelCustomRule = new ProductModel_CustomRule();
 
     @Before
     public void setup (){
 
         db = AppDatabase.getInstance(ApplicationProvider.getApplicationContext());
-
+        product_dao = db.productDAO();
     }
 
     @After
@@ -33,13 +39,12 @@ public class ProductTest {
     @Test
     public void Test_InsertNewProduct(){
 
-        ProductModel model = new ProductModel(1 , "ProductName" , 50 , "Image") ;
 
-        db.productDAO().insertproducts(model);
+        product_dao.insertproducts(productModelCustomRule.model);
 
-        ProductModel InsertedModel = db.productDAO().getProduct(model.getProductName());
+        ProductModel InsertedModel = product_dao.getProduct(productModelCustomRule.model.getProductName());
 
-        Assert.assertEquals(InsertedModel.getProductName() , model.getProductName());
+        Assert.assertEquals(InsertedModel.getProductName() , productModelCustomRule.model.getProductName());
 
     }
 }

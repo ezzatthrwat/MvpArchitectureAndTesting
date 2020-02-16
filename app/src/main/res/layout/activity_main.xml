@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/ProductActivity"
     tools:context=".Activities.product_activity.ui.MainActivity">
 
     <com.google.android.material.card.MaterialCardView
@@ -37,7 +38,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/button"
+        android:id="@+id/RecyclerView_Products"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:elevation="5dp"
