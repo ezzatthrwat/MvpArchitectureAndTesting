@@ -11,18 +11,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".Activities.MyApp"
+        android:name=".ui.Activities.MyApp"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.registration.ui.SingUp_activity.SignUpActivity"></activity>
-        <activity android:name=".Activities.registration.ui.Login_activity.LoginActivity">
+        <activity android:name=".ui.Activities.SingUp_activity.SignUpActivity"></activity>
+        <activity android:name=".ui.Activities.Login_activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.cart_activity.ui.CartActivity" />
-        <activity android:name=".Activities.product_activity.ui.MainActivity">
+        <activity android:name=".ui.Activities.cart_activity.CartActivity" />
+        <activity android:name=".ui.Activities.product_activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

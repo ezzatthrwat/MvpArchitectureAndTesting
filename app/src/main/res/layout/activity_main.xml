@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/ProductActivity"
-    tools:context=".Activities.product_activity.ui.MainActivity">
+    tools:context=".ui.Activities.product_activity.MainActivity">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"

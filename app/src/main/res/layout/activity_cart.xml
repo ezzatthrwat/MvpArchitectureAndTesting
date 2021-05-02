@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.cart_activity.ui.CartActivity"
+    tools:context=".ui.Activities.cart_activity.CartActivity"
     android:orientation="vertical">
 
 
